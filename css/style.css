@@ -6,8 +6,47 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+}
+
 body{
     font-size: 20px;
+    background-color: #F5F7FA;
+}
+
+p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    list-style: inside;
+}
+
+li a {
+    text-decoration: underline;
+    color: #0004ff;
 }
 
 nav ul {
@@ -15,27 +54,56 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #ffffff;
 }
 
 nav li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     float: left;
 }
   
 nav li a {
-    display: block;
-    color: white;
+    margin: 0;
+    list-style-type: none;
+    display: inline-block;
+    color: rgb(0, 0, 0);
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 20px;
+    position: relative;
 }
 
-nav li a:hover {
-    background-color: #111;
+nav li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+  nav li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+@media screen and (max-height: 300px) {
+      ul {
+          margin-top: 40px;
+      }
 }
 
 .current-nav {
-    padding: 14px 50px;
+    text-decoration: underline;
 }
 
 .skip-to-content-link {
@@ -55,4 +123,44 @@ nav li a:hover {
 .grid-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
+
+.photo {
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo:hover img {
+    transform: scale(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .photo:hover img {
+        transform: scale(1);
+    }
+    *, :before, :after {
+        /*CSS transitions*/
+        transition-property: none !important;
+        /*CSS transforms*/
+        transform: none !important;
+        /*CSS animations*/
+        animation: none !important;
+        }
+  }
