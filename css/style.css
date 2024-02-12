@@ -1,3 +1,16 @@
+title {
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main {
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Inter, sans-serif;
+}
+
 h1 {
     margin-top: 80px;
     margin-bottom: 40px;
@@ -88,22 +101,24 @@ nav li a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #fff;
+    background: #000000;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
-  nav li a:hover:after { 
+nav li a:hover:after { 
     width: 100%; 
     left: 0; 
 }
+
+.current-nav {
+    background-color: #F5F7FA;
+    text-decoration: underline;
+}
+
 @media screen and (max-height: 300px) {
       ul {
           margin-top: 40px;
       }
-}
-
-.current-nav {
-    text-decoration: underline;
 }
 
 .skip-to-content-link {
@@ -152,9 +167,6 @@ nav li a:after {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .photo:hover img {
-        transform: scale(1);
-    }
     *, :before, :after {
         /*CSS transitions*/
         transition-property: none !important;
@@ -162,5 +174,5 @@ nav li a:after {
         transform: none !important;
         /*CSS animations*/
         animation: none !important;
-        }
+    }
   }
