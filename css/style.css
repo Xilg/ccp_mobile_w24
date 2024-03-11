@@ -150,14 +150,14 @@ nav li a:hover:after {
 }
 
 .photo img {
-    width: 100%;
+    width: 50%;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
 }
 
 .photo video {
-    width: 100%;
+    width: 50%;
     height: auto;
     display: block;
 }
@@ -176,3 +176,30 @@ nav li a:hover:after {
         animation: none !important;
     }
   }
+
+@media screen and (min-width: 600px) {
+    .photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .photo video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    nav li a{
+        padding: 25px 40px;
+    }
+}
+
+/* @media screen and (min-width: 800px) {
+    .gallery {
+        background-color: green;
+        grid-template-columns: repeat(4, 19%);
+        justify-content: end;
+    }
+
+} */
